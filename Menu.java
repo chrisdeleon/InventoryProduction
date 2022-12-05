@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class Menu {
     Scanner input = new Scanner (System.in);
+    int itemNumber = 0;
 
 
     public String displayMenu(){ // displays the menu that a user can select from
@@ -18,8 +19,6 @@ public class Menu {
     }
 
     public Item addItem(){ // creates an item and adds it to the item list array
-        System.out.println("Enter item number: ");
-        int itemNumber = input.nextInt();
 
         System.out.println("Enter item quantity: ");
         int itemQuantity = input.nextInt();
@@ -29,6 +28,7 @@ public class Menu {
 
         // creates a new Item object instance and passes the recorded information as arguments
         Item addedItem = new Item(itemNumber, itemQuantity, s); 
+        itemNumber++;
         return addedItem;
     }
 
@@ -55,8 +55,10 @@ public class Menu {
             char c = (char)(Selection + '0'); // reads the input as a char so that the method runs
 
             if (c == 49){
+                int i = 0;
                 inventory.add(options.addItem()); // runs the function that adds Items to the ItemList 
                 System.out.println("Success!\n");
+                i++;
             } else if (c == 50){
                 System.out.println("Enter item number: ");
                 int i = input.nextInt();

@@ -24,7 +24,8 @@ public class Item {
     }
 
     public int setInStock(int num){
-        return this.itemInStock + num;
+        this.itemInStock = num;
+        return this.itemInStock;
     }
 
     public String getName(){ // getter for name

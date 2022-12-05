@@ -6,7 +6,6 @@ import java.util.ArrayList;
  * 12/5/2022
  */
 
-import java.util.ArrayList;
 
 public class ItemList {
     
@@ -18,7 +17,7 @@ public class ItemList {
         items.add(item);
     }
    
-    public ArrayList getItems(){ // returns all items of the Array List
+    public ArrayList<Item> getItems(){ // returns all items of the Array List
         return items;
     }
 
